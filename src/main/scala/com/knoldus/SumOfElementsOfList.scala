@@ -16,6 +16,11 @@ class SumOfElementsOfList {
 
     findSumHelper(list)
   }
+
+  def validateList(list: List[Long]): Either[String, Long] = {
+    list match {
+      case Nil =>Left("List is empty!")
+      case _ => Right(findSum(list))
+    }
+  }
 }
-
-
